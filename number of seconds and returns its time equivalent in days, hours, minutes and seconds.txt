@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the number of seconds: ");
+        int seconds = scanner.nextInt();
+
+        
+        String timeEquivalent = calculateTimeEquivalent(seconds);
+
+        
+        System.out.println("Time equivalent: " + timeEquivalent);
+
+        scanner.close();
+    }
+
+    
+    public static String calculateTimeEquivalent(int seconds) {
+        int days = seconds / (24 * 3600);
+        seconds %= (24 * 3600);
+        int hours = seconds / 3600;
+        seconds %= 3600;
+        int minutes = seconds / 60;
+        seconds %= 60;
+
+        return days + " Day(s) " + hours + " Hour(s) " + minutes + " Minute(s) " + seconds + " Second(s)";
+    }
+}
