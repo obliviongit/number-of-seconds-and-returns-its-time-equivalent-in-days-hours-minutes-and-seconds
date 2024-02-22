@@ -1,0 +1,1 @@
+# number-of-seconds-and-returns-its-time-equivalent-in-days-hours-minutes-and-seconds
